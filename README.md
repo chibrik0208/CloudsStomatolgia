@@ -1,24 +1,18 @@
-# README
+Clouds Stomatologia
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple informational website for a dental clinic, built with Ruby on Rails.
 
-Things you may want to cover:
+## 🦷 About the Project
 
-* Ruby version
+This website provides key information about the dental clinic, including:
 
-* System dependencies
+- Services offered
+- Contact information
+- Clinic location (map)
+- Opening hours
 
-* Configuration
+## 🚀 Technologies Used
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- **Ruby** (version 3.2.3)
+- **Ruby on Rails**
+- **JavaScript**
