@@ -23,6 +23,36 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper"> 
+      <!-- hedder section starts -->
+        <header class="header">
+          <div class="container">
+            <div class="header-inner">
+              <%= link_to root_path, class: "logo" do %>
+                <%= image_tag 'logo.png', style:"width: 90px; height: auto", alt: "Logo" %>
+              <% end %>
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__list-item">
+                    <%= link_to "Home", "#", class: "nav__list-link" %>
+                  </li>
+                  <li class="nav__list-item">
+                    <%= link_to "Ceny", "#", class: "nav__list-link" %>
+                  </li>
+                  <li class="nav__list-item">
+                    <%= link_to "Kontakty", "#", class: "nav__list-link" %>
+                  </li>
+                  <li class="nav__list-item">
+                    <%= link_to "O nas", "#", class: "nav__list-link" %>
+                  </li>
+                </ul>
+                <span class="number__in-header">+48 517 070222</span>           
+              </nav>
+            </div>
+          </div>
+        </header>
+      <!-- hedder section end -->
+      <%= yield %>
+    </div>  
   </body>
 </html>
