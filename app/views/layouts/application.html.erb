@@ -52,7 +52,38 @@
           </div>
         </header>
       <!-- hedder section end -->
-      <%= yield %>
+      <!-- main section starts -->
+        <%= yield %>
+      <!-- main section end -->
+      <!-- footer section starts -->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer-inner">
+              <nav class="footer-menu">
+                <ul class="footer_menu_list">
+                  <p>Adres i godziny otwarcia</p>
+                  <li class="footer__item">
+                    <%= link_to "Adres", "#", class:'footer__menu_link'%>
+                  </li>
+                  <li class="footer__item">
+                    <%= link_to "Godziny otwarcia", "#", class:'footer__menu_link'%>
+                  </li>
+                </ul>
+                <ul class="footer_menu_list">
+                  <p>Kontakty</p>
+                  <li class="footer__item">
+                    <span class="number__in-footer">+48 517 070222</span>
+                  </li>
+                  <li class="footer__item">
+                    <span class="email__in-footer">test@test.com</span>
+                  </li>
+                </ul>
+                <span class="text__in-footer">© 2025 CLOUDS Stomatologia. Wszelkie prawa zastrzeżone.</span>
+              </nav>
+            </div>
+          </div>
+        </footer>
+    <!-- footer section end -->
     </div>  
   </body>
 </html>
