@@ -1,29 +1,49 @@
 <!-- Контейнер карусели -->
-<div class="slider">
-  <div class="swiper" style="max-width: 1200px; height: 600px; margin: auto;">
+<section class="container">
+  <div class="slider">
+    <div class="swiper" style="max-width: 1200px; height: 600px; margin: auto;">
 
-    <!-- ОБЯЗАТЕЛЬНО добавить swiper-wrapper -->
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <%= image_tag 'carousel_photo_1.png', style: "width: 100%; height: 100%; object-fit: cover;", alt: 'carousel photo 1.png' %>
+      <!-- ОБЯЗАТЕЛЬНО добавить swiper-wrapper -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <%= image_tag 'carousel_photo_1.png', style: "width: 100%; height: 100%; object-fit: cover;", alt: 'carousel photo 1.png' %>
+        </div>
+        <div class="swiper-slide">
+          <%= image_tag 'carousel_photo_2.png', style: "width: 100%; height: 100%; object-fit: cover;", alt: 'carousel photo 2.png' %>
+        </div>
+        <div class="swiper-slide">
+          <%= image_tag 'carousel_photo_3.png', style: "width: 100%; height: 100%; object-fit: cover;", alt: 'carousel photo 3.png' %>
+        </div>
+        <div class="swiper-slide">
+          <%= image_tag 'carousel_photo_4.png', style: "width: 100%; height: 100%; object-fit: cover;", alt: 'carousel photo 4.png' %>
+        </div>
       </div>
-      <div class="swiper-slide">
-        <%= image_tag 'carousel_photo_2.png', style: "width: 100%; height: 100%; object-fit: cover;", alt: 'carousel photo 2.png' %>
-      </div>
-      <div class="swiper-slide">
-        <%= image_tag 'carousel_photo_3.png', style: "width: 100%; height: 100%; object-fit: cover;", alt: 'carousel photo 3.png' %>
-      </div>
-      <div class="swiper-slide">
-        <%= image_tag 'carousel_photo_4.png', style: "width: 100%; height: 100%; object-fit: cover;", alt: 'carousel photo 4.png' %>
-      </div>
+
+      <!-- Стрелки внутри .swiper -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
     </div>
-
-    <!-- Стрелки внутри .swiper -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-
   </div>
-</div>
+</section>
+
+<section class="container">
+  <h2 class="main-about-title">O nas</h2>
+  <div class="main-about-all">
+    <p class="main-about-us-1"> Witamy w <b>Clouds Stomatologia</b> – miejscu, gdzie zdrowie Twojego uśmiechu jest naszym priorytetem!
+      Jesteśmy nowoczesnym gabinetem stomatologicznym, który łączy doświadczenie, pasję i najnowsze technologie,
+      aby zapewnić naszym pacjentom opiekę na najwyższym poziomie. Oferujemy kompleksowe usługi stomatologiczne – od profilaktyki,
+      przez leczenie zachowawcze, endodoncję, aż po stomatologię estetyczną i protetykę.
+    </p>
+    <p class="main-about-us-2">
+      Każdego pacjenta traktujemy indywidualnie – słuchamy, doradzamy i wspólnie wybieramy najlepsze rozwiązania.
+      Dbamy o komfort i przyjazną atmosferę, dzięki czemu nawet najbardziej wymagające wizyty przebiegają bez stresu.
+    </p>
+    <p class="main-about-us-3">
+      Zaufaj nam i zadbaj o swój uśmiech z Clouds Stomatologia.
+    </p>
+  </div>
+</section>
 
 <!-- Скрипты Swiper -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
