@@ -1,5 +1,13 @@
 source "https://rubygems.org"
 
+gem 'font-awesome-less'
+gem 'less-rails'
+
+gem 'libv8', '~> 3.16.14.0'
+gem 'mini_racer', platforms: :ruby
+
+
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
