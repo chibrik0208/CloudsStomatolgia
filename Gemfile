@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem 'font-awesome-less'
 gem 'less-rails'
 
-gem 'libv8', '~> 3.16.14.0'
+gem 'libv8', '~> 8.4.255.0'
 gem 'mini_racer', platforms: :ruby
 
 
