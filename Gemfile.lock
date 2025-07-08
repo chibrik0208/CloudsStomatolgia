@@ -151,12 +151,10 @@ GEM
       actionpack (>= 5.0)
       less (~> 2.6.0)
       sprockets (~> 3.0)
-    libv8 (3.16.14.19.1)
-    libv8 (3.16.14.19.1-arm-linux)
-    libv8 (3.16.14.19.1-armv7l-linux)
-    libv8 (3.16.14.19.1-universal-darwin)
-    libv8 (3.16.14.19.1-x86_64-darwin)
-    libv8 (3.16.14.19.1-x86_64-linux)
+    libv8 (8.4.255.0.1)
+    libv8 (8.4.255.0.1-universal-darwin)
+    libv8 (8.4.255.0.1-x86_64-darwin)
+    libv8 (8.4.255.0.1-x86_64-linux)
     libv8-node (24.1.0.0)
     libv8-node (24.1.0.0-aarch64-linux)
     libv8-node (24.1.0.0-arm64-darwin)
@@ -411,7 +409,7 @@ DEPENDENCIES
   jbuilder
   kamal
   less-rails
-  libv8 (~> 3.16.14.0)
+  libv8 (~> 8.4.255.0)
   mini_racer
   propshaft
   puma (>= 5.0)
