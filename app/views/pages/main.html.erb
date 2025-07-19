@@ -194,6 +194,28 @@
   </div>
 </section>
 
+<div id="map" style="height: 400px; width: 35%;"></div> <!-- сделать все в процентах -->
+
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACGAeG29zfUrH1otoaK_DlGkzhPiTm1Cc&callback=initMap">
+</script>
+
+<script>
+  function initMap() {
+    const location = { lat: 52.3385503, lng: 20.9491093 };
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 12,
+      center: location,
+    });
+
+    const marker = new google.maps.Marker({
+      position: location,
+      map: map,
+    });
+  }
+</script>
+
 <!-- Скрипты Swiper -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
