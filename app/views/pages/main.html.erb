@@ -174,17 +174,17 @@
   <div class="main_contacts__all">
     <nav class="main_contacts__menu">
       <ul class="main_contacts__list">
-         <%= fa_icon('fa-phone', alt: 'map-marker', class: "fa-solid fa-phone fa-3x") %><!-- доделать иконки-->
+        <i class="fa-solid fa-square-phone fa-2xl" style="color: #74C0FC;"></i>
         <p class="main_contacts__title">Numer telefonu</p>
         <li class="main_contacts__item">
           +48 517 070222
         </li>
-        <%= fa_icon('map-marker', alt: 'map-marker', class: "fa fa-map-marker fa-3x") %>
+        <i class="fa-solid fa-location-dot fa-2xl" style="color: #74C0FC;"></i>
         <p class="main_contacts__title">Adres</p>
         <li class="main_contacts__item">
           Warszawa, ul. Dionizosa 6
         </li>
-       <%= fa_icon('clock-o', alt: 'clock', class: "fa fa-clock-o fa-3x") %>
+       <i class="fa-solid fa-clock fa-2xl" style="color: #74C0FC;"></i>
        <p class="main_contacts__title">Godziny otwarcia</p>
         <li class="main_contacts__item">
           9:00-21:00
@@ -193,6 +193,28 @@
     </nav>
   </div>
 </section>
+
+<div id="map" style="height: 400px; width: 35%;"></div> <!-- сделать все в процентах, разобраться с безопастностью-->
+
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACGAeG29zfUrH1otoaK_DlGkzhPiTm1Cc&callback=initMap">
+</script>
+
+<script>
+  function initMap() {
+    const location = { lat: 52.3385503, lng: 20.9491093 };
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 12,
+      center: location,
+    });
+
+    const marker = new google.maps.Marker({
+      position: location,
+      map: map,
+    });
+  }
+</script>
 
 <!-- Скрипты Swiper -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
