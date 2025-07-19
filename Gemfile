@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'libv8', '~> 3.16.14.0'
+gem "libv8", "~> 3.16.14.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
