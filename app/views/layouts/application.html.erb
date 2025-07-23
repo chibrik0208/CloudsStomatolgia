@@ -55,7 +55,12 @@
         </header>
       <!-- hedder section end -->
       <!-- main section starts -->
+      <body>
+        <% flash.each do |key, message| %>
+          <div class="flash <%= key %>"><%= message %></div>
+        <% end %>
         <%= yield %>
+      </body>
       <!-- main section end -->
       <!-- footer section starts -->
         <footer class="footer">

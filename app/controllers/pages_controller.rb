@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     message = params[:message]
 
     CallbackMailer.send_callback(name, email, phone, message).deliver_now
-    redirect_to root_path, notice: "Wkróce się z tobą skontaktujemy!"
+    flash[:notice] = "Wkróce się z tobą skontaktujemy!"
+    redirect_to root_path
   end
 end

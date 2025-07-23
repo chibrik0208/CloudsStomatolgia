@@ -1,10 +1,9 @@
 class CallbackMailer < ApplicationMailer
-  default to: "amelia.brooks.y96@gmail.com" # замени на свою почту
+  default to: "sandbox.smtp.mailtrap.io"
 
   def send_callback(name, email, phone, message)
     @name = name
     @phone = phone
-    @message = message
     @sender_email = email
 
     mail(

@@ -216,11 +216,11 @@
   }
 </script>
 
-<h2>Заказать звонок</h2>
+<h2>Zamów rozmowę</h2>
 
-<%= form_with url: "/callback", local: true do %>
+<%= form_with url: callback_path, local: true do %>
   <div>
-    <%= label_tag :name, "Имя и фамилия" %><br>
+    <%= label_tag :name, "Imie" %><br>
     <%= text_field_tag :name, nil, required: true %>
   </div>
 
@@ -230,22 +230,13 @@
   </div>
 
   <div>
-    <%= label_tag :phone, "Телефон" %><br>
+    <%= label_tag :phone, "Telefon" %><br>
     <%= telephone_field_tag :phone, nil, required: true %>
   </div>
 
   <div>
-    <%= label_tag :message, "Комментарий (необязательно)" %><br>
-    <%= text_area_tag :message, nil %>
+    <%= submit_tag "Wysłać", class: "btn btn-primary" %>
   </div>
-
-  <div>
-    <%= submit_tag "Отправить", class: "btn btn-primary" %>
-  </div>
-<% end %>
-
-<% if flash[:notice] %>
-  <p class="notice"><%= flash[:notice] %></p>
 <% end %>
 
 <!-- Скрипты Swiper -->
