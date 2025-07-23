@@ -216,6 +216,38 @@
   }
 </script>
 
+<h2>Заказать звонок</h2>
+
+<%= form_with url: "/callback", local: true do %>
+  <div>
+    <%= label_tag :name, "Имя и фамилия" %><br>
+    <%= text_field_tag :name, nil, required: true %>
+  </div>
+
+  <div>
+    <%= label_tag :email, "Email" %><br>
+    <%= email_field_tag :email, nil, required: true %>
+  </div>
+
+  <div>
+    <%= label_tag :phone, "Телефон" %><br>
+    <%= telephone_field_tag :phone, nil, required: true %>
+  </div>
+
+  <div>
+    <%= label_tag :message, "Комментарий (необязательно)" %><br>
+    <%= text_area_tag :message, nil %>
+  </div>
+
+  <div>
+    <%= submit_tag "Отправить", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<% if flash[:notice] %>
+  <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
 <!-- Скрипты Swiper -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
