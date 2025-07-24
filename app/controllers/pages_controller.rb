@@ -3,11 +3,11 @@ class PagesController < ApplicationController
     @contact_form = ContactForm.new(contact_params)
 
     if @contact_form.valid?
-      CallbackMailer.send_callback(
+      SendCallbackJob.perform_later(
         @contact_form.name,
         @contact_form.email,
         @contact_form.phone
-      ).deliver_now
+      )
 
       flash[:notice] = "Wkrótce się z tobą skontaktujemy!"
       redirect_to root_path
