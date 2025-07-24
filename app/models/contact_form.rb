@@ -1,5 +1,5 @@
 class ContactForm
-  include ActiveModel::Model   
+  include ActiveModel::Model
 
   attr_accessor :name, :email, :phone
 
