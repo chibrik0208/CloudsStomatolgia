@@ -1,15 +1,25 @@
 class PagesController < ApplicationController
-  def main
+  def callback
+    @contact_form = ContactForm.new(contact_params)
+
+    if @contact_form.valid?
+      CallbackMailer.send_callback(
+        @contact_form.name,
+        @contact_form.email,
+        @contact_form.phone
+      ).deliver_now
+
+      flash[:notice] = "Wkrótce się z tobą skontaktujemy!"
+      redirect_to root_path
+    else
+      flash[:alert] = @contact_form.errors.full_messages.join(", ")
+      render :main, status: :unprocessable_entity
+    end
   end
 
-  def callback
-    name    = params[:name]
-    email   = params[:email]
-    phone   = params[:phone]
-    message = params[:message]
+  private
 
-    CallbackMailer.send_callback(name, email, phone, message).deliver_now
-    flash[:notice] = "Wkróce się z tobą skontaktujemy!"
-    redirect_to root_path
+  def contact_params
+    params.permit(:name, :email, :phone)
   end
 end
