@@ -1,7 +1,7 @@
 class CallbackMailer < ApplicationMailer
   default to: "sandbox.smtp.mailtrap.io"
 
-  def send_callback(name, email, phone, message)
+  def send_callback(name, email, phone)
     @name = name
     @phone = phone
     @sender_email = email
