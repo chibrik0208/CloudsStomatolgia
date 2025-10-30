@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "libv8", "~> 3.16.14.0"
+gem "libv8", "~> 8.4.255.0"
 gem "sidekiq"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
